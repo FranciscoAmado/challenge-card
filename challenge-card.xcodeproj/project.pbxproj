@@ -1,0 +1,404 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1707A70C1C9856CA00D1594A /* BackCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1707A70B1C9856CA00D1594A /* BackCardView.xib */; };
+		1707A70F1C986A0300D1594A /* UIView+CardsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1707A70E1C986A0300D1594A /* UIView+CardsAnimation.m */; };
+		17A3ED2C1C9321EC00BAC4E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A3ED2B1C9321EC00BAC4E1 /* main.m */; };
+		17A3ED2F1C9321EC00BAC4E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A3ED2E1C9321EC00BAC4E1 /* AppDelegate.m */; };
+		17A3ED371C9321EC00BAC4E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A3ED361C9321EC00BAC4E1 /* Assets.xcassets */; };
+		17A3ED3A1C9321EC00BAC4E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A3ED381C9321EC00BAC4E1 /* LaunchScreen.storyboard */; };
+		17A3ED441C93233C00BAC4E1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A3ED421C93233C00BAC4E1 /* ViewController.m */; };
+		17A3ED451C93233C00BAC4E1 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A3ED431C93233C00BAC4E1 /* ViewController.xib */; };
+		17B4942D1C971E7300C0CBE7 /* TopContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B4942C1C971E7300C0CBE7 /* TopContainerView.m */; };
+		17B494311C971FC500C0CBE7 /* FrontCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B494301C971FC500C0CBE7 /* FrontCardView.xib */; };
+		17CD84AB1C98BA97009840D5 /* BackCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CD84AA1C98BA97009840D5 /* BackCardView.m */; };
+		17FF62091C932C0900019F52 /* CustomLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF62081C932C0900019F52 /* CustomLayout.m */; };
+		17FF62131C93339400019F52 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF62111C93339400019F52 /* CollectionViewCell.m */; };
+		17FF62141C93339400019F52 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17FF62121C93339400019F52 /* CollectionViewCell.xib */; };
+		17FF62171C96C3F400019F52 /* FrontCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF62161C96C3F400019F52 /* FrontCardView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1707A70B1C9856CA00D1594A /* BackCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackCardView.xib; sourceTree = "<group>"; };
+		1707A70D1C986A0300D1594A /* UIView+CardsAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CardsAnimation.h"; sourceTree = "<group>"; };
+		1707A70E1C986A0300D1594A /* UIView+CardsAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CardsAnimation.m"; sourceTree = "<group>"; };
+		17A3ED271C9321EC00BAC4E1 /* challenge-card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "challenge-card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A3ED2B1C9321EC00BAC4E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		17A3ED2D1C9321EC00BAC4E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		17A3ED2E1C9321EC00BAC4E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		17A3ED361C9321EC00BAC4E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17A3ED391C9321EC00BAC4E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		17A3ED3B1C9321EC00BAC4E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17A3ED411C93233C00BAC4E1 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		17A3ED421C93233C00BAC4E1 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		17A3ED431C93233C00BAC4E1 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		17B4942B1C971E7300C0CBE7 /* TopContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopContainerView.h; sourceTree = "<group>"; };
+		17B4942C1C971E7300C0CBE7 /* TopContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopContainerView.m; sourceTree = "<group>"; };
+		17B494301C971FC500C0CBE7 /* FrontCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FrontCardView.xib; sourceTree = "<group>"; };
+		17CD84A91C98BA97009840D5 /* BackCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackCardView.h; sourceTree = "<group>"; };
+		17CD84AA1C98BA97009840D5 /* BackCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackCardView.m; sourceTree = "<group>"; };
+		17FF62071C932C0900019F52 /* CustomLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLayout.h; sourceTree = "<group>"; };
+		17FF62081C932C0900019F52 /* CustomLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLayout.m; sourceTree = "<group>"; };
+		17FF62101C93339400019F52 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		17FF62111C93339400019F52 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		17FF62121C93339400019F52 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		17FF62151C96C3F400019F52 /* FrontCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrontCardView.h; sourceTree = "<group>"; };
+		17FF62161C96C3F400019F52 /* FrontCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrontCardView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17A3ED241C9321EC00BAC4E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1707A7121C987E1D00D1594A /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				1707A70D1C986A0300D1594A /* UIView+CardsAnimation.h */,
+				1707A70E1C986A0300D1594A /* UIView+CardsAnimation.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		1707A7131C987E3300D1594A /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				17FF62151C96C3F400019F52 /* FrontCardView.h */,
+				17FF62161C96C3F400019F52 /* FrontCardView.m */,
+				17B494301C971FC500C0CBE7 /* FrontCardView.xib */,
+				17CD84A91C98BA97009840D5 /* BackCardView.h */,
+				17CD84AA1C98BA97009840D5 /* BackCardView.m */,
+				1707A70B1C9856CA00D1594A /* BackCardView.xib */,
+			);
+			name = CardView;
+			sourceTree = "<group>";
+		};
+		17A3ED1E1C9321EC00BAC4E1 = {
+			isa = PBXGroup;
+			children = (
+				17A3ED291C9321EC00BAC4E1 /* challenge-card */,
+				17A3ED281C9321EC00BAC4E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17A3ED281C9321EC00BAC4E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17A3ED271C9321EC00BAC4E1 /* challenge-card.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17A3ED291C9321EC00BAC4E1 /* challenge-card */ = {
+			isa = PBXGroup;
+			children = (
+				17A3ED2D1C9321EC00BAC4E1 /* AppDelegate.h */,
+				17A3ED2E1C9321EC00BAC4E1 /* AppDelegate.m */,
+				17A3ED381C9321EC00BAC4E1 /* LaunchScreen.storyboard */,
+				17FF620D1C932CEA00019F52 /* Assets */,
+				1707A7121C987E1D00D1594A /* Categories */,
+				17FF620A1C932CAE00019F52 /* Controllers */,
+				17FF620E1C932D9100019F52 /* Layouts */,
+				17FF620C1C932CDE00019F52 /* Model */,
+				17A3ED2A1C9321EC00BAC4E1 /* Supporting Files */,
+				17FF620B1C932CB800019F52 /* Views */,
+			);
+			path = "challenge-card";
+			sourceTree = "<group>";
+		};
+		17A3ED2A1C9321EC00BAC4E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				17A3ED3B1C9321EC00BAC4E1 /* Info.plist */,
+				17A3ED2B1C9321EC00BAC4E1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		17FF620A1C932CAE00019F52 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				17A3ED411C93233C00BAC4E1 /* ViewController.h */,
+				17A3ED421C93233C00BAC4E1 /* ViewController.m */,
+				17A3ED431C93233C00BAC4E1 /* ViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		17FF620B1C932CB800019F52 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1707A7131C987E3300D1594A /* CardView */,
+				17FF62101C93339400019F52 /* CollectionViewCell.h */,
+				17FF62111C93339400019F52 /* CollectionViewCell.m */,
+				17FF62121C93339400019F52 /* CollectionViewCell.xib */,
+				17B4942B1C971E7300C0CBE7 /* TopContainerView.h */,
+				17B4942C1C971E7300C0CBE7 /* TopContainerView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		17FF620C1C932CDE00019F52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		17FF620D1C932CEA00019F52 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				17A3ED361C9321EC00BAC4E1 /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		17FF620E1C932D9100019F52 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				17FF62071C932C0900019F52 /* CustomLayout.h */,
+				17FF62081C932C0900019F52 /* CustomLayout.m */,
+			);
+			name = Layouts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17A3ED261C9321EC00BAC4E1 /* challenge-card */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17A3ED3E1C9321EC00BAC4E1 /* Build configuration list for PBXNativeTarget "challenge-card" */;
+			buildPhases = (
+				17A3ED231C9321EC00BAC4E1 /* Sources */,
+				17A3ED241C9321EC00BAC4E1 /* Frameworks */,
+				17A3ED251C9321EC00BAC4E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "challenge-card";
+			productName = "challenge-card";
+			productReference = 17A3ED271C9321EC00BAC4E1 /* challenge-card.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17A3ED1F1C9321EC00BAC4E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = franciscoamado;
+				TargetAttributes = {
+					17A3ED261C9321EC00BAC4E1 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 17A3ED221C9321EC00BAC4E1 /* Build configuration list for PBXProject "challenge-card" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17A3ED1E1C9321EC00BAC4E1;
+			productRefGroup = 17A3ED281C9321EC00BAC4E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17A3ED261C9321EC00BAC4E1 /* challenge-card */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17A3ED251C9321EC00BAC4E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17B494311C971FC500C0CBE7 /* FrontCardView.xib in Resources */,
+				17A3ED3A1C9321EC00BAC4E1 /* LaunchScreen.storyboard in Resources */,
+				17A3ED451C93233C00BAC4E1 /* ViewController.xib in Resources */,
+				1707A70C1C9856CA00D1594A /* BackCardView.xib in Resources */,
+				17FF62141C93339400019F52 /* CollectionViewCell.xib in Resources */,
+				17A3ED371C9321EC00BAC4E1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17A3ED231C9321EC00BAC4E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17A3ED441C93233C00BAC4E1 /* ViewController.m in Sources */,
+				17FF62131C93339400019F52 /* CollectionViewCell.m in Sources */,
+				17CD84AB1C98BA97009840D5 /* BackCardView.m in Sources */,
+				17B4942D1C971E7300C0CBE7 /* TopContainerView.m in Sources */,
+				1707A70F1C986A0300D1594A /* UIView+CardsAnimation.m in Sources */,
+				17FF62171C96C3F400019F52 /* FrontCardView.m in Sources */,
+				17A3ED2F1C9321EC00BAC4E1 /* AppDelegate.m in Sources */,
+				17FF62091C932C0900019F52 /* CustomLayout.m in Sources */,
+				17A3ED2C1C9321EC00BAC4E1 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		17A3ED381C9321EC00BAC4E1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17A3ED391C9321EC00BAC4E1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17A3ED3C1C9321EC00BAC4E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17A3ED3D1C9321EC00BAC4E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17A3ED3F1C9321EC00BAC4E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "challenge-card/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "franciscoamado.challenge-card";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		17A3ED401C9321EC00BAC4E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "challenge-card/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "franciscoamado.challenge-card";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17A3ED221C9321EC00BAC4E1 /* Build configuration list for PBXProject "challenge-card" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17A3ED3C1C9321EC00BAC4E1 /* Debug */,
+				17A3ED3D1C9321EC00BAC4E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17A3ED3E1C9321EC00BAC4E1 /* Build configuration list for PBXNativeTarget "challenge-card" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17A3ED3F1C9321EC00BAC4E1 /* Debug */,
+				17A3ED401C9321EC00BAC4E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17A3ED1F1C9321EC00BAC4E1 /* Project object */;
+}
