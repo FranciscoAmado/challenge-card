@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1707A70C1C9856CA00D1594A /* BackCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1707A70B1C9856CA00D1594A /* BackCardView.xib */; };
-		1707A70F1C986A0300D1594A /* UIView+CardsAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1707A70E1C986A0300D1594A /* UIView+CardsAnimation.m */; };
+		1707A70F1C986A0300D1594A /* UIView+FlipViews.m in Sources */ = {isa = PBXBuildFile; fileRef = 1707A70E1C986A0300D1594A /* UIView+FlipViews.m */; };
 		17A3ED2C1C9321EC00BAC4E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A3ED2B1C9321EC00BAC4E1 /* main.m */; };
 		17A3ED2F1C9321EC00BAC4E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A3ED2E1C9321EC00BAC4E1 /* AppDelegate.m */; };
 		17A3ED371C9321EC00BAC4E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A3ED361C9321EC00BAC4E1 /* Assets.xcassets */; };
@@ -26,8 +26,8 @@
 
 /* Begin PBXFileReference section */
 		1707A70B1C9856CA00D1594A /* BackCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackCardView.xib; sourceTree = "<group>"; };
-		1707A70D1C986A0300D1594A /* UIView+CardsAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CardsAnimation.h"; sourceTree = "<group>"; };
-		1707A70E1C986A0300D1594A /* UIView+CardsAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CardsAnimation.m"; sourceTree = "<group>"; };
+		1707A70D1C986A0300D1594A /* UIView+FlipViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FlipViews.h"; sourceTree = "<group>"; };
+		1707A70E1C986A0300D1594A /* UIView+FlipViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FlipViews.m"; sourceTree = "<group>"; };
 		17A3ED271C9321EC00BAC4E1 /* challenge-card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "challenge-card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A3ED2B1C9321EC00BAC4E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		17A3ED2D1C9321EC00BAC4E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,8 +66,8 @@
 		1707A7121C987E1D00D1594A /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				1707A70D1C986A0300D1594A /* UIView+CardsAnimation.h */,
-				1707A70E1C986A0300D1594A /* UIView+CardsAnimation.m */,
+				1707A70D1C986A0300D1594A /* UIView+FlipViews.h */,
+				1707A70E1C986A0300D1594A /* UIView+FlipViews.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -251,7 +251,7 @@
 				17FF62131C93339400019F52 /* CollectionViewCell.m in Sources */,
 				17CD84AB1C98BA97009840D5 /* BackCardView.m in Sources */,
 				17B4942D1C971E7300C0CBE7 /* TopContainerView.m in Sources */,
-				1707A70F1C986A0300D1594A /* UIView+CardsAnimation.m in Sources */,
+				1707A70F1C986A0300D1594A /* UIView+FlipViews.m in Sources */,
 				17FF62171C96C3F400019F52 /* FrontCardView.m in Sources */,
 				17A3ED2F1C9321EC00BAC4E1 /* AppDelegate.m in Sources */,
 				17FF62091C932C0900019F52 /* CustomLayout.m in Sources */,

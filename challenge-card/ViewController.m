@@ -12,6 +12,7 @@
 #define kCellTitleText @"kCellTitleText"
 #define kCellPlaceholderText @"kCellPlaceholderText"
 #define kCellInputType @"kCellInputType"
+#define kCellCardFacingView @"kCellCardFacingView"
 
 @interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -19,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *collectionViewFlowLayout;
 @property (weak, nonatomic) IBOutlet TopContainerView *topContainer;
 @property (strong, nonatomic) CollectionViewCell *sizingCell;
+@property (strong, nonatomic) CollectionViewCell *actualCell;
+@property (strong, nonatomic) NSArray <CollectionViewCell *> *cellArray;
 
 @property (strong, nonatomic) NSArray <NSDictionary *> *cellPropertiesArray;
 
@@ -40,25 +43,29 @@
     NSDictionary *cellNumber = @{
         kCellTitleText: @"Card Number",
         kCellPlaceholderText:@"",
-        kCellInputType: @(CollectionViewCellInputTypeNumber)
+        kCellInputType: @(CollectionViewCellInputTypeNumber),
+        kCellCardFacingView: @(CardFacingViewFront)
     };
 
     NSDictionary *cellExpiryDate = @{
         kCellTitleText:@"Expiry Date",
         kCellPlaceholderText:@"YY/MM",
-        kCellInputType:@(CollectionViewCellInputTypeDate)
+        kCellInputType:@(CollectionViewCellInputTypeDate),
+        kCellCardFacingView: @(CardFacingViewFront)
     };
 
     NSDictionary *cellCardCode = @{
         kCellTitleText:@"CVC",
         kCellPlaceholderText:@"",
-        kCellInputType:@(CollectionViewCellInputTypeNumber)
+        kCellInputType:@(CollectionViewCellInputTypeNumber),
+        kCellCardFacingView: @(CardFacingViewBack)
     };
 
     NSDictionary *cellCardholder = @{
         kCellTitleText:@"Card Holder's Name",
         kCellPlaceholderText:@"John Doe",
-        kCellInputType:@(CollectionViewCellInputTypeText)
+        kCellInputType:@(CollectionViewCellInputTypeText),
+        kCellCardFacingView: @(CardFacingViewFront)
     };
 
     self.cellPropertiesArray = @[cellNumber, cellExpiryDate, cellCardCode, cellCardholder];
@@ -109,7 +116,8 @@
 
     [cell setPlaceholderText:[cellContent objectForKey:kCellPlaceholderText]];
     [cell setCaptionText:[cellContent objectForKey:kCellTitleText]];
-    [cell setInputType:[[cellContent objectForKey:kCellInputType] integerValue]];
+    [cell setInputType:[[cellContent objectForKey:kCellInputType] unsignedIntegerValue]];
+    [cell setCardFacingView:[[cellContent objectForKey:kCellCardFacingView] unsignedIntegerValue]];
 
     return cell;
 }
@@ -120,18 +128,51 @@
     NSIndexPath *cellIndexPath = [NSIndexPath indexPathForRow:tag inSection:0];
     [self.collectionView scrollToItemAtIndexPath:cellIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
 
-    [self.topContainer flipToFrontView:NO];
+    CollectionViewCell *cell = (CollectionViewCell *) [self.collectionView cellForItemAtIndexPath:cellIndexPath];
+
+    if (self.actualCell == nil) {
+        self.actualCell = cell;
+
+        if (self.actualCell.cardFacingView == CardFacingViewBack) {
+            [self.topContainer flipToFrontView:NO];
+        }
+
+        return;
+    }
+
+    if (self.actualCell.cardFacingView != cell.cardFacingView) {
+        if (cell.cardFacingView == CardFacingViewFront) {
+            [self.topContainer flipToFrontView:YES];
+        }
+        else {
+            [self.topContainer flipToFrontView:NO];
+        }
+    }
+
+    self.actualCell = cell;
 }
 
 - (void)didEndEditingCellWithTag:(NSInteger)tag
 {
+    if (self.actualCell.cardFacingView == CardFacingViewBack) {
+        [self.topContainer flipToFrontView:YES];
+    }
+
+    self.actualCell = nil;
+}
+
+- (void)didReturnEditingCellWithTag:(NSInteger)tag
+{
     [self.collectionView endEditing:YES];
-    NSIndexPath *cellIndexPath = [NSIndexPath indexPathForRow:tag + 1 inSection:0];
 
-    CollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:cellIndexPath];
+    NSIndexPath *cellIndexPath = [NSIndexPath indexPathForRow:tag inSection:0];
+    CollectionViewCell *cell = (CollectionViewCell *) [self.collectionView cellForItemAtIndexPath:cellIndexPath];
 
-    if (cell != nil) {
-        [cell focusOn];
+    NSIndexPath *nextCellIndexPath = [NSIndexPath indexPathForRow:tag + 1 inSection:0];
+    CollectionViewCell *nextCell = (CollectionViewCell *) [self.collectionView cellForItemAtIndexPath:nextCellIndexPath];
+
+    if (nextCell != nil) {
+        [nextCell focusOn];
     }
 }
 

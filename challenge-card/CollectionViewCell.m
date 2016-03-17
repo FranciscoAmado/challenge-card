@@ -25,6 +25,8 @@
     [super awakeFromNib];
 
     self.labelPadding = self.labelLeadingConstraint.constant;
+    self.inputType = CollectionViewCellInputTypeNumber;
+    self.cardFacingView = CardFacingViewFront;
 }
 
 - (void)cancelNumberPad
@@ -62,6 +64,10 @@
                                            action:@selector(textFieldShouldReturn:)]];
         [numberToolbar sizeToFit];
         self.textField.inputAccessoryView = numberToolbar;
+    }
+    else {
+        [self.textField setKeyboardType:UIKeyboardTypeDefault];
+        self.textField.inputAccessoryView = nil;
     }
 }
 
@@ -108,6 +114,12 @@
     NSLog(@"textFieldDidEndEditing");
 
     [self.fadeView setAlpha:0.5f];
+
+    id <CollectionViewCellDelegate> strongDelegate = self.delegate;
+
+//    if ([strongDelegate respondsToSelector:@selector(didEndEditingCellWithTag:)]) {
+//        [strongDelegate didEndEditingCellWithTag:self.tag];
+//    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -117,8 +129,8 @@
     [self.fadeView setAlpha:0.5f];
     id <CollectionViewCellDelegate> strongDelegate = self.delegate;
 
-    if ([strongDelegate respondsToSelector:@selector(didEndEditingCellWithTag:)]) {
-        [strongDelegate didEndEditingCellWithTag:self.tag];
+    if ([strongDelegate respondsToSelector:@selector(didReturnEditingCellWithTag:)]) {
+        [strongDelegate didReturnEditingCellWithTag:self.tag];
     }
 
     return YES;

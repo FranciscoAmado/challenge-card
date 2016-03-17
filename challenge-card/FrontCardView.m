@@ -100,6 +100,7 @@
     [self addConstraints:@[leading, trailing, top, bottom]];
 
     [self.view.layer setCornerRadius:10.0f];
+    [self.leftImageView.layer setCornerRadius:5.0f];
 }
 
 @end

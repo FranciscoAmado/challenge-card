@@ -7,7 +7,7 @@
 //
 
 #import "TopContainerView.h"
-#import "UIView+CardsAnimation.h"
+#import "UIView+FlipViews.h"
 #import "FrontCardView.h"
 #import "BackCardView.h"
 
@@ -41,10 +41,11 @@
 - (void)flipToFrontView:(BOOL)flipToFront
 {
     if (flipToFront) {
-        [UIView flipFromView:self.backView toView:self.frontView];
+        [UIView transitionFromView:self.backView toView:self.frontView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft | UIViewAnimationOptionCurveEaseInOut completion:NULL];
     }
     else {
-        [UIView flipFromView:self.frontView toView:self.backView];
+//        [UIView flipFromView:self.frontView toView:self.backView];
+        [UIView transitionFromView:self.frontView toView:self.backView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromRight | UIViewAnimationOptionCurveEaseInOut completion:NULL];
     }
 }
 

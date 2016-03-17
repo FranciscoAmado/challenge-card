@@ -6,9 +6,9 @@
 //  Copyright © 2016 franciscoamado. All rights reserved.
 //
 
-#import "UIView+CardsAnimation.h"
+#import "UIView+FlipViews.h"
 
-@implementation UIView (CardsAnimation)
+@implementation UIView (FlipViews)
 
 + (void)flipFromView:(UIView *)frontView toView:(UIView *)backView
 {
@@ -29,7 +29,7 @@
                               delay:0.0
              usingSpringWithDamping:0.3
               initialSpringVelocity:0.0
-                            options:0
+                            options:UIViewAnimationOptionCurveEaseOut
                          animations:^{
             layerBack.transform = CATransform3DIdentity;
         }
@@ -41,11 +41,12 @@
 {
     CATransform3D rotationAndPerspectiveTransform = CATransform3DIdentity;
     rotationAndPerspectiveTransform.m34 = 1 / -1000;
-    rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform,
-                                                          M_PI / 2,
-                                                          0.0f,
-                                                          left ? 1.0f : -1.0f,
-                                                          0.0f);
+    // Rotate 180ª in y axis
+    rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform,  //transform
+                                                          M_PI / 2,                         //angle
+                                                          0.0f,                             //x
+                                                          left ? 1.0f : -1.0f,              //y
+                                                          0.0f);                            //z
 
     return rotationAndPerspectiveTransform;
 }

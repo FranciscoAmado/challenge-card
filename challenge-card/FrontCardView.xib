@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -24,10 +24,6 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Rt-ht-dJm">
-                    <rect key="frame" x="10" y="10" width="300" height="180"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                </view>
                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aiB-GG-edh">
                     <rect key="frame" x="123" y="55" width="75" height="90"/>
                     <constraints>
@@ -35,61 +31,88 @@
                         <constraint firstAttribute="height" constant="90" id="xql-Ds-6Dn"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvN-HS-YXh">
-                    <rect key="frame" x="32" y="90" width="256" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXX XXXX XXXX XXXX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YvN-HS-YXh">
+                    <rect key="frame" x="32" y="89" width="256" height="22"/>
+                    <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="22"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cZr-hR-tVB">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chip" translatesAutoresizingMaskIntoConstraints="NO" id="cZr-hR-tVB">
                     <rect key="frame" x="18" y="18" width="48" height="38"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="38" id="2Ag-MW-Nxt"/>
                         <constraint firstAttribute="width" constant="48" id="inL-EO-Zhu"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfF-fv-5mt">
-                    <rect key="frame" x="18" y="156" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JOHN DOE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfF-fv-5mt">
+                    <rect key="frame" x="18" y="161" width="82" height="17"/>
+                    <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgV-8o-U9G">
-                    <rect key="frame" x="262" y="163" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MM/ YY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="cgV-8o-U9G">
+                    <rect key="frame" x="230" y="161" width="73.5" height="17"/>
+                    <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </label>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YSi-lW-Vg1">
-                    <rect key="frame" x="32" y="15" width="256" height="32"/>
-                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="23"/>
+                    <rect key="frame" x="32" y="24" width="256" height="23"/>
+                    <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="23"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARD HOLDER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7V-qz-hEv">
+                    <rect key="frame" x="18" y="149" width="79.5" height="12"/>
+                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="12"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXPIRES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSE-KT-EU3">
+                    <rect key="frame" x="230" y="149" width="72" height="12"/>
+                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="12"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="cZr-hR-tVB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="18" id="6U2-Mw-Mrq"/>
+                <constraint firstItem="o7V-qz-hEv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="18" id="8sj-fr-50v"/>
+                <constraint firstItem="pSE-KT-EU3" firstAttribute="leading" secondItem="cgV-8o-U9G" secondAttribute="leading" id="9mo-9F-Lmz"/>
                 <constraint firstItem="aiB-GG-edh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Adi-3d-EmL"/>
+                <constraint firstItem="cgV-8o-U9G" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="230" id="Amj-MM-72l"/>
                 <constraint firstAttribute="bottom" secondItem="kQF-SH-mya" secondAttribute="bottom" id="E48-2T-g4e"/>
                 <constraint firstItem="JfF-fv-5mt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="18" id="Epw-JW-CI6"/>
                 <constraint firstItem="cZr-hR-tVB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="18" id="HS2-ee-X5e"/>
                 <constraint firstItem="kQF-SH-mya" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JCS-Ud-c0X"/>
-                <constraint firstAttribute="bottom" secondItem="cgV-8o-U9G" secondAttribute="bottom" constant="16" id="MWw-N7-ZYw"/>
+                <constraint firstAttribute="bottom" secondItem="cgV-8o-U9G" secondAttribute="bottom" constant="22" id="MWw-N7-ZYw"/>
                 <constraint firstAttribute="trailing" secondItem="YSi-lW-Vg1" secondAttribute="trailing" constant="32" id="MwK-Qh-7E5"/>
                 <constraint firstItem="YSi-lW-Vg1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="QWA-Sf-PYo"/>
+                <constraint firstItem="cgV-8o-U9G" firstAttribute="top" secondItem="pSE-KT-EU3" secondAttribute="bottom" id="Rh3-7y-n69"/>
                 <constraint firstAttribute="trailing" secondItem="cgV-8o-U9G" secondAttribute="trailing" constant="16" id="UDl-r2-p6Y"/>
                 <constraint firstItem="YvN-HS-YXh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="32" id="Woh-lX-lez"/>
                 <constraint firstItem="kQF-SH-mya" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="YEh-2t-P5g"/>
                 <constraint firstAttribute="trailing" secondItem="YvN-HS-YXh" secondAttribute="trailing" constant="32" id="ZKZ-q2-KIJ"/>
                 <constraint firstItem="aiB-GG-edh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="aMl-jW-twe"/>
-                <constraint firstAttribute="bottom" secondItem="JfF-fv-5mt" secondAttribute="bottom" constant="23" id="b65-XV-ovX"/>
+                <constraint firstAttribute="bottom" secondItem="JfF-fv-5mt" secondAttribute="bottom" constant="22" id="b65-XV-ovX"/>
                 <constraint firstItem="YvN-HS-YXh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="deh-gK-j9M"/>
+                <constraint firstItem="JfF-fv-5mt" firstAttribute="leading" secondItem="o7V-qz-hEv" secondAttribute="leading" id="fJV-nB-MhQ"/>
+                <constraint firstAttribute="trailing" secondItem="pSE-KT-EU3" secondAttribute="trailing" constant="18" id="pRP-yB-BKp"/>
+                <constraint firstItem="JfF-fv-5mt" firstAttribute="top" secondItem="o7V-qz-hEv" secondAttribute="bottom" id="qeA-Cx-4Ta"/>
                 <constraint firstAttribute="trailing" secondItem="kQF-SH-mya" secondAttribute="trailing" id="sn3-10-yd2"/>
                 <constraint firstItem="aiB-GG-edh" firstAttribute="top" secondItem="YSi-lW-Vg1" secondAttribute="bottom" constant="8" id="yvX-ys-slE"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="8sj-fr-50v"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="247.5" y="121.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="chip" width="228" height="184"/>
+    </resources>
 </document>

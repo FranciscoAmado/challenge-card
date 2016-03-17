@@ -1,5 +1,5 @@
 //
-//  UIView+CardsAnimation.h
+//  UIView+FlipViews.h
 //  challenge-card
 //
 //  Created by franciscoamado on 15/03/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (CardsAnimation)
+@interface UIView (FlipViews)
 
 + (void)flipFromView:(UIView *)frontView toView:(UIView *)backView;
 
