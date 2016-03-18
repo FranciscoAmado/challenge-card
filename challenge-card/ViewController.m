@@ -57,14 +57,14 @@
     NSDictionary *cellCardCode = @{
         kCellTitleText:@"CVC",
         kCellPlaceholderText:@"",
-        kCellInputType:@(CollectionViewCellInputTypeNumber),
+        kCellInputType:@(CollectionViewCellInputTypeCode),
         kCellCardFacingView: @(CardFacingViewBack)
     };
 
     NSDictionary *cellCardholder = @{
         kCellTitleText:@"Card Holder's Name",
         kCellPlaceholderText:@"John Doe",
-        kCellInputType:@(CollectionViewCellInputTypeText),
+        kCellInputType:@(CollectionViewCellInputTypeCardHolder),
         kCellCardFacingView: @(CardFacingViewFront)
     };
 
@@ -112,18 +112,18 @@
     cell.layer.shouldRasterize = YES;
     cell.layer.rasterizationScale = [UIScreen mainScreen].scale;
 
-    NSLog(@"captionText:%@", [cellContent objectForKey:kCellTitleText]);
-
     [cell setPlaceholderText:[cellContent objectForKey:kCellPlaceholderText]];
     [cell setCaptionText:[cellContent objectForKey:kCellTitleText]];
     [cell setInputType:[[cellContent objectForKey:kCellInputType] unsignedIntegerValue]];
     [cell setCardFacingView:[[cellContent objectForKey:kCellCardFacingView] unsignedIntegerValue]];
 
+    [cell setTag:[[cellContent objectForKey:kCellInputType] integerValue]];
+
     return cell;
 }
 
 #pragma MARK CollectionViewCellDelegate
-- (void)didStartEditingCellWithTag:(NSInteger)tag
+- (void)didStartEditingCellWithTag:(NSUInteger)tag
 {
     NSIndexPath *cellIndexPath = [NSIndexPath indexPathForRow:tag inSection:0];
     [self.collectionView scrollToItemAtIndexPath:cellIndexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
@@ -152,7 +152,7 @@
     self.actualCell = cell;
 }
 
-- (void)didEndEditingCellWithTag:(NSInteger)tag
+- (void)didEndEditingCellWithTag:(NSUInteger)tag
 {
     if (self.actualCell.cardFacingView == CardFacingViewBack) {
         [self.topContainer flipToFrontView:YES];
@@ -161,18 +161,37 @@
     self.actualCell = nil;
 }
 
-- (void)didReturnEditingCellWithTag:(NSInteger)tag
+- (void)didReturnEditingCellWithTag:(NSUInteger)tag
 {
     [self.collectionView endEditing:YES];
-
-    NSIndexPath *cellIndexPath = [NSIndexPath indexPathForRow:tag inSection:0];
-    CollectionViewCell *cell = (CollectionViewCell *) [self.collectionView cellForItemAtIndexPath:cellIndexPath];
 
     NSIndexPath *nextCellIndexPath = [NSIndexPath indexPathForRow:tag + 1 inSection:0];
     CollectionViewCell *nextCell = (CollectionViewCell *) [self.collectionView cellForItemAtIndexPath:nextCellIndexPath];
 
     if (nextCell != nil) {
         [nextCell focusOn];
+    }
+}
+
+- (void)didChangeCellWithTag:(NSUInteger)tag withText:(NSString *)string
+{
+    NSLog(@"didChangeCellWithString: %@", string);
+
+    if (tag == CollectionViewCellInputTypeNumber) {
+        if (string.length > 3) {
+            [self.topContainer changeFrontCardBackgroundColor:[UIColor greenColor]];
+        }
+
+        [self.topContainer.frontView setCenterLabelWithText:string];
+    }
+    else if (tag == CollectionViewCellInputTypeDate) {
+        [self.topContainer.frontView setRightBottomLabelWithText:string];
+    }
+    else if (tag == CollectionViewCellInputTypeCode) {
+        [self.topContainer.backView setCenterLabelWithText:string];
+    }
+    else if (tag == CollectionViewCellInputTypeCardHolder) {
+        [self.topContainer.frontView setLeftBottomLabelWithText:string];
     }
 }
 

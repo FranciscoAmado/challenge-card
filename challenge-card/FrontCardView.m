@@ -11,10 +11,13 @@
 @interface FrontCardView ()
 
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property (strong, nonatomic) IBOutlet UIView *backgroundView;
+@property (strong, nonatomic) IBOutlet UIView *backgroundBorderView;
 @property (strong, nonatomic) IBOutlet UIImageView *leftImageView;
 @property (strong, nonatomic) IBOutlet UILabel *centerLabel;
 @property (strong, nonatomic) IBOutlet UILabel *rightBottomLabel;
 @property (strong, nonatomic) IBOutlet UILabel *leftBottomLabel;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *backgroundViewWidthConstraint;
 
 @end
 
@@ -98,9 +101,52 @@
                                           multiplier:1.0
                                             constant:0];
     [self addConstraints:@[leading, trailing, top, bottom]];
+    [self overallSetup];
+}
 
+- (void)overallSetup
+{
     [self.view.layer setCornerRadius:10.0f];
+
     [self.leftImageView.layer setCornerRadius:5.0f];
+
+    self.backgroundViewWidthConstraint.constant = 0;
+    [self.backgroundView setNeedsUpdateConstraints];
+
+    UIImage *backgroundImage = [[UIImage imageNamed:@"pattern.png"] stretchableImageWithLeftCapWidth:10.0 topCapHeight:10.0];
+    [self.backgroundBorderView setBackgroundColor:[UIColor colorWithPatternImage:backgroundImage]];
+    [self.backgroundBorderView.layer setCornerRadius:10.0f];
+    [self.backgroundBorderView.layer setBorderColor:[UIColor whiteColor].CGColor];
+    [self.backgroundBorderView.layer setBorderWidth:1.0];
+}
+
+- (void)changeBackgroundColorFor:(UIColor *)newColor
+{
+//    [self.view setBackgroundColor:newColor];
+    self.backgroundViewWidthConstraint.constant = self.view.frame.size.width;
+    [UIView animateWithDuration:0.4 delay:0.0 options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+        [self.backgroundView layoutIfNeeded];
+    }
+                     completion:nil];
+}
+
+- (void)setCenterLabelWithText:(NSString *)text
+{
+    [self.centerLabel setHighlighted:YES];
+    [self.centerLabel setText:text];
+}
+
+- (void)setLeftBottomLabelWithText:(NSString *)text
+{
+    [self.leftBottomLabel setHighlighted:YES];
+    [self.leftBottomLabel setText:text];
+}
+
+- (void)setRightBottomLabelWithText:(NSString *)text
+{
+    [self.rightBottomLabel setHighlighted:YES];
+    [self.rightBottomLabel setText:text];
 }
 
 @end

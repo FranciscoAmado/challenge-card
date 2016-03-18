@@ -10,9 +10,10 @@
 
 typedef enum : NSUInteger
 {
-    CollectionViewCellInputTypeNumber,
-    CollectionViewCellInputTypeText,
-    CollectionViewCellInputTypeDate
+    CollectionViewCellInputTypeNumber = 0,
+    CollectionViewCellInputTypeCardHolder,
+    CollectionViewCellInputTypeDate,
+    CollectionViewCellInputTypeCode
 } CollectionViewCellInputType;
 
 typedef enum : NSUInteger
@@ -23,9 +24,10 @@ typedef enum : NSUInteger
 
 @protocol CollectionViewCellDelegate <NSObject>
 
-- (void)didStartEditingCellWithTag:(NSInteger)tag;
-- (void)didEndEditingCellWithTag:(NSInteger)tag;
-- (void)didReturnEditingCellWithTag:(NSInteger)tag;
+- (void)didStartEditingCellWithTag:(NSUInteger)tag;
+- (void)didEndEditingCellWithTag:(NSUInteger)tag;
+- (void)didReturnEditingCellWithTag:(NSUInteger)tag;
+- (void)didChangeCellWithTag:(NSUInteger)tag withText:(NSString *)string;
 
 @end
 

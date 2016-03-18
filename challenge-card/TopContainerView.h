@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "FrontCardView.h"
+#import "BackCardView.h"
+
 @interface TopContainerView : UIView
 
+@property (strong, nonatomic) FrontCardView *frontView;
+@property (strong, nonatomic) BackCardView *backView;
+
 - (void)flipToFrontView:(BOOL)flipToFront;
+- (void)changeFrontCardBackgroundColor:(UIColor *)newColor;
 
 @end

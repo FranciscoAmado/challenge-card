@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol FrontCardViewDelegate <NSObject>
+
+@end
+
 @interface FrontCardView : UIView
 
-@property (strong, nonatomic) IBOutlet UIView *backgroundView;
+@property (nonatomic, weak) id <FrontCardViewDelegate> delegate;
+
+- (void)setCenterLabelWithText:(NSString *)text;
+- (void)setLeftBottomLabelWithText:(NSString *)text;
+- (void)setRightBottomLabelWithText:(NSString *)text;
+- (void)changeBackgroundColorFor:(UIColor *)newColor;
 
 @end

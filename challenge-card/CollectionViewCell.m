@@ -49,7 +49,9 @@
 
 - (void)setInputType:(CollectionViewCellInputType)inputType
 {
-    if (inputType == CollectionViewCellInputTypeNumber || inputType == CollectionViewCellInputTypeDate) {
+    _inputType = inputType;
+
+    if (inputType == CollectionViewCellInputTypeNumber || inputType == CollectionViewCellInputTypeCode) {
         [self.textField setKeyboardType:UIKeyboardTypeNumberPad];
 
         // Add toolbar for number input
@@ -64,6 +66,10 @@
                                            action:@selector(textFieldShouldReturn:)]];
         [numberToolbar sizeToFit];
         self.textField.inputAccessoryView = numberToolbar;
+    }
+    else if (inputType == CollectionViewCellInputTypeDate) {
+        [self.textField setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
+        self.textField.inputAccessoryView = nil;
     }
     else {
         [self.textField setKeyboardType:UIKeyboardTypeDefault];
@@ -111,26 +117,27 @@
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    NSLog(@"textFieldDidEndEditing");
-
     [self.fadeView setAlpha:0.5f];
-
-    id <CollectionViewCellDelegate> strongDelegate = self.delegate;
-
-//    if ([strongDelegate respondsToSelector:@selector(didEndEditingCellWithTag:)]) {
-//        [strongDelegate didEndEditingCellWithTag:self.tag];
-//    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    NSLog(@"textFieldShouldReturn");
-
     [self.fadeView setAlpha:0.5f];
     id <CollectionViewCellDelegate> strongDelegate = self.delegate;
 
     if ([strongDelegate respondsToSelector:@selector(didReturnEditingCellWithTag:)]) {
         [strongDelegate didReturnEditingCellWithTag:self.tag];
+    }
+
+    return YES;
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    id <CollectionViewCellDelegate> strongDelegate = self.delegate;
+
+    if ([strongDelegate respondsToSelector:@selector(didChangeCellWithTag:withText:)]) {
+        [strongDelegate didChangeCellWithTag:self.inputType withText:[textField.text stringByReplacingCharactersInRange:range withString:string]];
     }
 
     return YES;

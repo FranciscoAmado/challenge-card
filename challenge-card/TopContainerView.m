@@ -8,14 +8,10 @@
 
 #import "TopContainerView.h"
 #import "UIView+FlipViews.h"
-#import "FrontCardView.h"
-#import "BackCardView.h"
 
 @interface TopContainerView ()
 
 @property (weak, nonatomic) IBOutlet UIView *templateView;
-@property (strong, nonatomic) FrontCardView *frontView;
-@property (strong, nonatomic) BackCardView *backView;
 
 @end
 
@@ -32,7 +28,6 @@
 
     self.frontView = [[FrontCardView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.templateView.frame.size.width, self.templateView.frame.size.height)];
     self.backView = [[BackCardView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.templateView.frame.size.width, self.templateView.frame.size.height)];
-//    [self.backView.backgroundView setBackgroundColor:[UIColor redColor]];
 
     [self.templateView addSubview:self.backView];
     [self.templateView addSubview:self.frontView];
@@ -44,9 +39,13 @@
         [UIView transitionFromView:self.backView toView:self.frontView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromLeft | UIViewAnimationOptionCurveEaseInOut completion:NULL];
     }
     else {
-//        [UIView flipFromView:self.frontView toView:self.backView];
         [UIView transitionFromView:self.frontView toView:self.backView duration:0.5 options:UIViewAnimationOptionTransitionFlipFromRight | UIViewAnimationOptionCurveEaseInOut completion:NULL];
     }
+}
+
+- (void)changeFrontCardBackgroundColor:(UIColor *)newColor
+{
+    [self.frontView changeBackgroundColorFor:newColor];
 }
 
 @end

@@ -11,10 +11,10 @@
 @interface BackCardView ()
 
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property (strong, nonatomic) IBOutlet UIView *backgroundView;
 @property (strong, nonatomic) IBOutlet UIImageView *leftImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *centerImageView;
 @property (strong, nonatomic) IBOutlet UILabel *centerLabel;
-@property (strong, nonatomic) IBOutlet UILabel *rightBottomLabel;
-@property (strong, nonatomic) IBOutlet UILabel *leftBottomLabel;
 
 @end
 
@@ -98,8 +98,24 @@
                                           multiplier:1.0
                                             constant:0];
     [self addConstraints:@[leading, trailing, top, bottom]];
+    [self overallSetup];
+}
 
+- (void)overallSetup
+{
     [self.view.layer setCornerRadius:10.0f];
+
+    UIImage *backgroundImage = [[UIImage imageNamed:@"pattern.png"] stretchableImageWithLeftCapWidth:10.0 topCapHeight:10.0];
+
+    [self.backgroundView setBackgroundColor:[UIColor colorWithPatternImage:backgroundImage]];
+
+    [self.leftImageView.layer setCornerRadius:5.0f];
+}
+
+- (void)setCenterLabelWithText:(NSString *)text
+{
+    [self.centerLabel setHighlighted:YES];
+    [self.centerLabel setText:text];
 }
 
 @end

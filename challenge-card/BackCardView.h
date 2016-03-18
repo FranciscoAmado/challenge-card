@@ -10,4 +10,6 @@
 
 @interface BackCardView : UIView
 
+- (void)setCenterLabelWithText:(NSString *)text;
+
 @end
