@@ -18,7 +18,6 @@
 		17B4942D1C971E7300C0CBE7 /* TopContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B4942C1C971E7300C0CBE7 /* TopContainerView.m */; };
 		17B494311C971FC500C0CBE7 /* FrontCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B494301C971FC500C0CBE7 /* FrontCardView.xib */; };
 		17CD84AB1C98BA97009840D5 /* BackCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CD84AA1C98BA97009840D5 /* BackCardView.m */; };
-		17FF62091C932C0900019F52 /* CustomLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF62081C932C0900019F52 /* CustomLayout.m */; };
 		17FF62131C93339400019F52 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF62111C93339400019F52 /* CollectionViewCell.m */; };
 		17FF62141C93339400019F52 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17FF62121C93339400019F52 /* CollectionViewCell.xib */; };
 		17FF62171C96C3F400019F52 /* FrontCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FF62161C96C3F400019F52 /* FrontCardView.m */; };
@@ -43,8 +42,6 @@
 		17B494301C971FC500C0CBE7 /* FrontCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FrontCardView.xib; sourceTree = "<group>"; };
 		17CD84A91C98BA97009840D5 /* BackCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackCardView.h; sourceTree = "<group>"; };
 		17CD84AA1C98BA97009840D5 /* BackCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackCardView.m; sourceTree = "<group>"; };
-		17FF62071C932C0900019F52 /* CustomLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLayout.h; sourceTree = "<group>"; };
-		17FF62081C932C0900019F52 /* CustomLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomLayout.m; sourceTree = "<group>"; };
 		17FF62101C93339400019F52 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		17FF62111C93339400019F52 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		17FF62121C93339400019F52 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
@@ -107,7 +104,6 @@
 				17FF620D1C932CEA00019F52 /* Assets */,
 				1707A7121C987E1D00D1594A /* Categories */,
 				17FF620A1C932CAE00019F52 /* Controllers */,
-				17FF620E1C932D9100019F52 /* Layouts */,
 				17FF620C1C932CDE00019F52 /* Model */,
 				17A3ED2A1C9321EC00BAC4E1 /* Supporting Files */,
 				17FF620B1C932CB800019F52 /* Views */,
@@ -163,15 +159,6 @@
 				17A3ED361C9321EC00BAC4E1 /* Assets.xcassets */,
 			);
 			path = Assets;
-			sourceTree = "<group>";
-		};
-		17FF620E1C932D9100019F52 /* Layouts */ = {
-			isa = PBXGroup;
-			children = (
-				17FF62071C932C0900019F52 /* CustomLayout.h */,
-				17FF62081C932C0900019F52 /* CustomLayout.m */,
-			);
-			path = Layouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +241,6 @@
 				1707A70F1C986A0300D1594A /* UIView+FlipViews.m in Sources */,
 				17FF62171C96C3F400019F52 /* FrontCardView.m in Sources */,
 				17A3ED2F1C9321EC00BAC4E1 /* AppDelegate.m in Sources */,
-				17FF62091C932C0900019F52 /* CustomLayout.m in Sources */,
 				17A3ED2C1C9321EC00BAC4E1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

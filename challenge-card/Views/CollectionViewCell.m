@@ -37,7 +37,6 @@
 
 - (void)doneWithNumberPad
 {
-    NSString *numberFromTheKeyboard = self.textField.text;
     [self.textField resignFirstResponder];
 }
 

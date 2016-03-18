@@ -45,7 +45,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AMERICAN EXPRESS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YSi-lW-Vg1">
-                            <rect key="frame" x="8" y="29" width="304" height="20"/>
+                            <rect key="frame" x="8" y="30" width="304" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="192.5" id="e4g-Qc-eYR"/>
                             </constraints>
@@ -58,12 +58,17 @@
                                 </mask>
                             </variation>
                         </label>
-                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aiB-GG-edh">
-                            <rect key="frame" x="122" y="55" width="75" height="90"/>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aiB-GG-edh">
+                            <rect key="frame" x="8" y="55" width="304" height="90"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="75" id="wNx-t5-M3p"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" id="wNx-t5-M3p"/>
                                 <constraint firstAttribute="height" constant="90" id="xql-Ds-6Dn"/>
                             </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="wNx-t5-M3p"/>
+                                </mask>
+                            </variation>
                         </imageView>
                         <view clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTV-qO-Mqr">
                             <rect key="frame" x="10" y="10" width="300" height="180"/>
@@ -77,15 +82,23 @@
                         <constraint firstAttribute="trailing" secondItem="NTV-qO-Mqr" secondAttribute="trailing" constant="10" id="Qbj-Fg-0sP"/>
                         <constraint firstItem="aiB-GG-edh" firstAttribute="centerX" secondItem="kQF-SH-mya" secondAttribute="centerX" id="Qqb-LT-8Qu"/>
                         <constraint firstItem="YSi-lW-Vg1" firstAttribute="centerY" secondItem="kQF-SH-mya" secondAttribute="centerY" id="QsC-Un-sAi"/>
+                        <constraint firstItem="YSi-lW-Vg1" firstAttribute="top" secondItem="kQF-SH-mya" secondAttribute="top" constant="30" id="Qv3-f8-wle"/>
                         <constraint firstItem="aiB-GG-edh" firstAttribute="top" secondItem="YSi-lW-Vg1" secondAttribute="bottom" constant="6" id="W5w-Ts-SgR"/>
                         <constraint firstItem="aiB-GG-edh" firstAttribute="centerY" secondItem="kQF-SH-mya" secondAttribute="centerY" id="axg-gr-w2R"/>
                         <constraint firstItem="YSi-lW-Vg1" firstAttribute="leading" secondItem="kQF-SH-mya" secondAttribute="leading" constant="8" id="dnK-VA-iTs"/>
                         <constraint firstItem="NTV-qO-Mqr" firstAttribute="top" secondItem="kQF-SH-mya" secondAttribute="top" constant="10" id="ff6-N8-0oS"/>
                         <constraint firstItem="NTV-qO-Mqr" firstAttribute="leading" secondItem="kQF-SH-mya" secondAttribute="leading" constant="10" id="lOI-6D-gWJ"/>
                         <constraint firstAttribute="trailing" secondItem="YSi-lW-Vg1" secondAttribute="trailing" constant="8" id="xgS-Vj-Aiu"/>
+                        <constraint firstAttribute="trailing" secondItem="aiB-GG-edh" secondAttribute="trailing" constant="8" id="y85-zT-fLc"/>
+                        <constraint firstItem="aiB-GG-edh" firstAttribute="leading" secondItem="kQF-SH-mya" secondAttribute="leading" constant="8" id="yYE-82-FlK"/>
                     </constraints>
                     <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="aiB-GG-edh"/>
+                        </mask>
                         <mask key="constraints">
+                            <exclude reference="Qqb-LT-8Qu"/>
+                            <exclude reference="W5w-Ts-SgR"/>
                             <exclude reference="QsC-Un-sAi"/>
                         </mask>
                     </variation>

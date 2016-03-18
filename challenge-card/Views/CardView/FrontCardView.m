@@ -112,9 +112,12 @@
 
     self.backgroundViewWidthConstraint.constant = 0;
     [self.backgroundView setNeedsUpdateConstraints];
+    [self.backgroundView.layer setCornerRadius:10.0f];
+    [self.backgroundView setClipsToBounds:YES];
 
     UIImage *backgroundImage = [[UIImage imageNamed:@"pattern.png"] stretchableImageWithLeftCapWidth:10.0 topCapHeight:10.0];
     [self.backgroundBorderView setBackgroundColor:[UIColor colorWithPatternImage:backgroundImage]];
+    [self.backgroundView setClipsToBounds:YES];
     [self.backgroundBorderView.layer setCornerRadius:10.0f];
     [self.backgroundBorderView.layer setBorderColor:[UIColor whiteColor].CGColor];
     [self.backgroundBorderView.layer setBorderWidth:1.0];

@@ -35,7 +35,7 @@
                         <outlet property="delegate" destination="-1" id="3cv-yP-IQg"/>
                     </connections>
                 </collectionView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yx0-Ql-JUE" customClass="TopContainerView">
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yx0-Ql-JUE" customClass="TopContainerView">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
                     <subviews>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RvH-jH-7mh">

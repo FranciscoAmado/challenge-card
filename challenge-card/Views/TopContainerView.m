@@ -29,6 +29,7 @@
     self.frontView = [[FrontCardView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.templateView.frame.size.width, self.templateView.frame.size.height)];
     self.backView = [[BackCardView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.templateView.frame.size.width, self.templateView.frame.size.height)];
 
+    [self.templateView.layer setCornerRadius:10.0f];
     [self.templateView addSubview:self.backView];
     [self.templateView addSubview:self.frontView];
 }

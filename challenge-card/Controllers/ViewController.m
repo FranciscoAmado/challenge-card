@@ -25,8 +25,6 @@
 
 @property (strong, nonatomic) NSArray <NSDictionary *> *cellPropertiesArray;
 
-//@property (strong, nonatomic) NSArray *titlesArray;
-
 @end
 
 @implementation ViewController
@@ -116,7 +114,6 @@
     [cell setCaptionText:[cellContent objectForKey:kCellTitleText]];
     [cell setInputType:[[cellContent objectForKey:kCellInputType] unsignedIntegerValue]];
     [cell setCardFacingView:[[cellContent objectForKey:kCellCardFacingView] unsignedIntegerValue]];
-
     [cell setTag:[[cellContent objectForKey:kCellInputType] integerValue]];
 
     return cell;
