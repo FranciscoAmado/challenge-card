@@ -175,8 +175,6 @@
 
 - (void)didChangeCellWithTag:(NSUInteger)tag withText:(NSString *)string
 {
-    NSLog(@"didChangeCellWithString: %@", string);
-
     if (tag == CollectionViewCellInputTypeNumber) {
         if (string.length > 3) {
             [self.topContainer changeFrontCardBackgroundColor:[UIColor greenColor]];

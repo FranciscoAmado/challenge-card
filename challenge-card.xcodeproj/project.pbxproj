@@ -69,27 +69,27 @@
 				1707A70D1C986A0300D1594A /* UIView+FlipViews.h */,
 				1707A70E1C986A0300D1594A /* UIView+FlipViews.m */,
 			);
-			name = Categories;
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		1707A7131C987E3300D1594A /* CardView */ = {
 			isa = PBXGroup;
 			children = (
-				17FF62151C96C3F400019F52 /* FrontCardView.h */,
-				17FF62161C96C3F400019F52 /* FrontCardView.m */,
-				17B494301C971FC500C0CBE7 /* FrontCardView.xib */,
 				17CD84A91C98BA97009840D5 /* BackCardView.h */,
 				17CD84AA1C98BA97009840D5 /* BackCardView.m */,
 				1707A70B1C9856CA00D1594A /* BackCardView.xib */,
+				17FF62151C96C3F400019F52 /* FrontCardView.h */,
+				17FF62161C96C3F400019F52 /* FrontCardView.m */,
+				17B494301C971FC500C0CBE7 /* FrontCardView.xib */,
 			);
-			name = CardView;
+			path = CardView;
 			sourceTree = "<group>";
 		};
 		17A3ED1E1C9321EC00BAC4E1 = {
 			isa = PBXGroup;
 			children = (
-				17A3ED291C9321EC00BAC4E1 /* challenge-card */,
 				17A3ED281C9321EC00BAC4E1 /* Products */,
+				17A3ED291C9321EC00BAC4E1 /* challenge-card */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,9 +104,6 @@
 		17A3ED291C9321EC00BAC4E1 /* challenge-card */ = {
 			isa = PBXGroup;
 			children = (
-				17A3ED2D1C9321EC00BAC4E1 /* AppDelegate.h */,
-				17A3ED2E1C9321EC00BAC4E1 /* AppDelegate.m */,
-				17A3ED381C9321EC00BAC4E1 /* LaunchScreen.storyboard */,
 				17FF620D1C932CEA00019F52 /* Assets */,
 				1707A7121C987E1D00D1594A /* Categories */,
 				17FF620A1C932CAE00019F52 /* Controllers */,
@@ -114,6 +111,9 @@
 				17FF620C1C932CDE00019F52 /* Model */,
 				17A3ED2A1C9321EC00BAC4E1 /* Supporting Files */,
 				17FF620B1C932CB800019F52 /* Views */,
+				17A3ED2D1C9321EC00BAC4E1 /* AppDelegate.h */,
+				17A3ED2E1C9321EC00BAC4E1 /* AppDelegate.m */,
+				17A3ED381C9321EC00BAC4E1 /* LaunchScreen.storyboard */,
 			);
 			path = "challenge-card";
 			sourceTree = "<group>";
@@ -124,7 +124,7 @@
 				17A3ED3B1C9321EC00BAC4E1 /* Info.plist */,
 				17A3ED2B1C9321EC00BAC4E1 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		17FF620A1C932CAE00019F52 /* Controllers */ = {
@@ -134,7 +134,7 @@
 				17A3ED421C93233C00BAC4E1 /* ViewController.m */,
 				17A3ED431C93233C00BAC4E1 /* ViewController.xib */,
 			);
-			name = Controllers;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		17FF620B1C932CB800019F52 /* Views */ = {
@@ -147,14 +147,14 @@
 				17B4942B1C971E7300C0CBE7 /* TopContainerView.h */,
 				17B4942C1C971E7300C0CBE7 /* TopContainerView.m */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		17FF620C1C932CDE00019F52 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		17FF620D1C932CEA00019F52 /* Assets */ = {
@@ -162,7 +162,7 @@
 			children = (
 				17A3ED361C9321EC00BAC4E1 /* Assets.xcassets */,
 			);
-			name = Assets;
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		17FF620E1C932D9100019F52 /* Layouts */ = {
@@ -171,7 +171,7 @@
 				17FF62071C932C0900019F52 /* CustomLayout.h */,
 				17FF62081C932C0900019F52 /* CustomLayout.m */,
 			);
-			name = Layouts;
+			path = Layouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +268,7 @@
 				17A3ED391C9321EC00BAC4E1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -359,7 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "challenge-card/Info.plist";
+				INFOPLIST_FILE = "challenge-card/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "franciscoamado.challenge-card";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -370,7 +371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "challenge-card/Info.plist";
+				INFOPLIST_FILE = "challenge-card/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "franciscoamado.challenge-card";
 				PRODUCT_NAME = "$(TARGET_NAME)";
