@@ -41,6 +41,11 @@
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RvH-jH-7mh">
                             <rect key="frame" x="22" y="22" width="556" height="206"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <gestureRecognizers/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="9Ps-rh-czW" appends="YES" id="5l2-zp-vqi"/>
+                                <outletCollection property="gestureRecognizers" destination="n3f-o2-bzo" appends="YES" id="GU7-AK-aff"/>
+                            </connections>
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="0.74625211148648651" colorSpace="calibratedRGB"/>
@@ -52,6 +57,7 @@
                         <constraint firstItem="RvH-jH-7mh" firstAttribute="leading" secondItem="Yx0-Ql-JUE" secondAttribute="leading" constant="22" id="yhv-CC-efq"/>
                     </constraints>
                     <connections>
+                        <outlet property="swipeGesture" destination="9Ps-rh-czW" id="EH3-R4-uwC"/>
                         <outlet property="templateView" destination="RvH-jH-7mh" id="6QG-Lu-Q7Q"/>
                     </connections>
                 </view>
@@ -66,5 +72,17 @@
                 <constraint firstItem="Yx0-Ql-JUE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="w6V-8H-ti4"/>
             </constraints>
         </view>
+        <swipeGestureRecognizer direction="left" id="9Ps-rh-czW">
+            <connections>
+                <action selector="swipeFromRight:" destination="Yx0-Ql-JUE" id="EoJ-GW-DWO"/>
+                <outlet property="delegate" destination="Yx0-Ql-JUE" id="aez-AS-YNb"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <swipeGestureRecognizer direction="right" id="n3f-o2-bzo">
+            <connections>
+                <action selector="swipeFromLeft:" destination="Yx0-Ql-JUE" id="hPw-N1-EeV"/>
+                <outlet property="delegate" destination="Yx0-Ql-JUE" id="VIh-cO-hQV"/>
+            </connections>
+        </swipeGestureRecognizer>
     </objects>
 </document>

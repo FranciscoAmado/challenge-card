@@ -26,7 +26,7 @@
 
     self.labelPadding = self.labelLeadingConstraint.constant;
     self.inputType = CollectionViewCellInputTypeNumber;
-    self.cardFacingView = CardFacingViewFront;
+    self.belongsToFrontCard = YES;
 }
 
 - (void)cancelNumberPad
@@ -86,6 +86,11 @@
 {
     _placeholderText = placeholderText;
     [self.textField setPlaceholder:placeholderText];
+}
+
+- (void)setBelongsToFrontCard:(BOOL)belongsToFrontCard
+{
+    _belongsToFrontCard = belongsToFrontCard;
 }
 
 - (void)focusOn

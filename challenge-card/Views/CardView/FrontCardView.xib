@@ -103,29 +103,41 @@
                         </mask>
                     </variation>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXX XXXX XXXX XXXX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YvN-HS-YXh">
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXX XXXX XXXX XXXX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YvN-HS-YXh">
                     <rect key="frame" x="32" y="89" width="256" height="22"/>
+                    <gestureRecognizers/>
                     <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="22"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="jbh-GN-Rpd" appends="YES" id="rwQ-fU-ctT"/>
+                    </connections>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JOHN DOE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfF-fv-5mt">
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JOHN DOE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfF-fv-5mt">
                     <rect key="frame" x="20" y="161" width="82" height="17"/>
+                    <gestureRecognizers/>
                     <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="17"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="e52-KM-eqk" appends="YES" id="WGs-qM-SRF"/>
+                    </connections>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MM/ YY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="cgV-8o-U9G">
+                <label opaque="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MM/ YY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="cgV-8o-U9G">
                     <rect key="frame" x="230" y="161" width="73.5" height="17"/>
+                    <gestureRecognizers/>
                     <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="17"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="7Zc-HP-SSC" appends="YES" id="5Qn-HC-tN0"/>
+                    </connections>
                 </label>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="cZr-hR-tVB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="18" id="6U2-Mw-Mrq"/>
-                <constraint firstItem="o7V-qz-hEv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="18" id="8sj-fr-50v"/>
                 <constraint firstItem="pSE-KT-EU3" firstAttribute="leading" secondItem="cgV-8o-U9G" secondAttribute="leading" id="9mo-9F-Lmz"/>
                 <constraint firstItem="cgV-8o-U9G" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="230" id="Amj-MM-72l"/>
                 <constraint firstAttribute="bottom" secondItem="kQF-SH-mya" secondAttribute="bottom" id="E48-2T-g4e"/>
@@ -144,18 +156,33 @@
                 <constraint firstAttribute="trailing" secondItem="pSE-KT-EU3" secondAttribute="trailing" constant="18" id="pRP-yB-BKp"/>
                 <constraint firstItem="kQF-SH-mya" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="qUx-4p-NwI"/>
                 <constraint firstItem="JfF-fv-5mt" firstAttribute="top" secondItem="o7V-qz-hEv" secondAttribute="bottom" id="qeA-Cx-4Ta"/>
-                <constraint firstAttribute="trailing" secondItem="kQF-SH-mya" secondAttribute="trailing" id="sn3-10-yd2"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="qUx-4p-NwI"/>
-                    <exclude reference="sn3-10-yd2"/>
-                    <exclude reference="8sj-fr-50v"/>
                 </mask>
             </variation>
             <point key="canvasLocation" x="247.5" y="121.5"/>
         </view>
+        <tapGestureRecognizer id="jbh-GN-Rpd">
+            <connections>
+                <action selector="centerLabelTouched:" destination="-1" id="RDR-cT-gS3"/>
+                <outlet property="delegate" destination="-1" id="9vl-ad-KFc"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="e52-KM-eqk">
+            <connections>
+                <action selector="leftBottomLabelTouched:" destination="-1" id="92u-B7-hVK"/>
+                <outlet property="delegate" destination="-1" id="lPA-ae-m5d"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="7Zc-HP-SSC">
+            <connections>
+                <action selector="rightBottomLabelTouched:" destination="-1" id="L6K-We-3e0"/>
+                <outlet property="delegate" destination="-1" id="3Ho-BO-Fi0"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="chip" width="228" height="184"/>

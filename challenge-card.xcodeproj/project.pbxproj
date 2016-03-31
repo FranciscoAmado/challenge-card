@@ -27,6 +27,7 @@
 		1707A70B1C9856CA00D1594A /* BackCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BackCardView.xib; sourceTree = "<group>"; };
 		1707A70D1C986A0300D1594A /* UIView+FlipViews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FlipViews.h"; sourceTree = "<group>"; };
 		1707A70E1C986A0300D1594A /* UIView+FlipViews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FlipViews.m"; sourceTree = "<group>"; };
+		1708F0691CAD6CE200BB881A /* CardViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewDelegate.h; sourceTree = "<group>"; };
 		17A3ED271C9321EC00BAC4E1 /* challenge-card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "challenge-card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A3ED2B1C9321EC00BAC4E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		17A3ED2D1C9321EC00BAC4E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 				17FF62151C96C3F400019F52 /* FrontCardView.h */,
 				17FF62161C96C3F400019F52 /* FrontCardView.m */,
 				17B494301C971FC500C0CBE7 /* FrontCardView.xib */,
+				1708F0691CAD6CE200BB881A /* CardViewDelegate.h */,
 			);
 			path = CardView;
 			sourceTree = "<group>";

@@ -7,14 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@protocol FrontCardViewDelegate <NSObject>
-
-@end
+#import "CardViewDelegate.h"
 
 @interface FrontCardView : UIView
 
-@property (nonatomic, weak) id <FrontCardViewDelegate> delegate;
+@property (nonatomic, weak) id <CardViewDelegate> delegate;
 
 - (void)setCenterLabelWithText:(NSString *)text;
 - (void)setLeftBottomLabelWithText:(NSString *)text;

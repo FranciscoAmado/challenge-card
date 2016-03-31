@@ -16,12 +16,6 @@ typedef enum : NSUInteger
     CollectionViewCellInputTypeCode
 } CollectionViewCellInputType;
 
-typedef enum : NSUInteger
-{
-    CardFacingViewFront,
-    CardFacingViewBack
-} CardFacingView;
-
 @protocol CollectionViewCellDelegate <NSObject>
 
 - (void)didStartEditingCellWithTag:(NSUInteger)tag;
@@ -38,7 +32,7 @@ typedef enum : NSUInteger
 @property (strong, nonatomic) NSString *placeholderText;
 @property (assign, nonatomic) BOOL isFinalItem;
 @property (assign, nonatomic) CollectionViewCellInputType inputType;
-@property (assign, nonatomic) CardFacingView cardFacingView;
+@property (assign, nonatomic) BOOL belongsToFrontCard;
 
 - (void)focusOn;
 - (CGSize)sizeForConstrainedSize:(CGSize)size;

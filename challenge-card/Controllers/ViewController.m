@@ -12,7 +12,6 @@
 #define kCellTitleText @"kCellTitleText"
 #define kCellPlaceholderText @"kCellPlaceholderText"
 #define kCellInputType @"kCellInputType"
-#define kCellCardFacingView @"kCellCardFacingView"
 
 @interface ViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -22,7 +21,6 @@
 @property (strong, nonatomic) CollectionViewCell *sizingCell;
 @property (strong, nonatomic) CollectionViewCell *actualCell;
 @property (strong, nonatomic) NSArray <CollectionViewCell *> *cellArray;
-
 @property (strong, nonatomic) NSArray <NSDictionary *> *cellPropertiesArray;
 
 @end
@@ -42,28 +40,24 @@
         kCellTitleText: @"Card Number",
         kCellPlaceholderText:@"",
         kCellInputType: @(CollectionViewCellInputTypeNumber),
-        kCellCardFacingView: @(CardFacingViewFront)
     };
 
     NSDictionary *cellExpiryDate = @{
         kCellTitleText:@"Expiry Date",
         kCellPlaceholderText:@"YY/MM",
         kCellInputType:@(CollectionViewCellInputTypeDate),
-        kCellCardFacingView: @(CardFacingViewFront)
     };
 
     NSDictionary *cellCardCode = @{
         kCellTitleText:@"CVC",
         kCellPlaceholderText:@"",
         kCellInputType:@(CollectionViewCellInputTypeCode),
-        kCellCardFacingView: @(CardFacingViewBack)
     };
 
     NSDictionary *cellCardholder = @{
         kCellTitleText:@"Card Holder's Name",
         kCellPlaceholderText:@"John Doe",
         kCellInputType:@(CollectionViewCellInputTypeCardHolder),
-        kCellCardFacingView: @(CardFacingViewFront)
     };
 
     self.cellPropertiesArray = @[cellNumber, cellExpiryDate, cellCardCode, cellCardholder];
@@ -113,7 +107,11 @@
     [cell setPlaceholderText:[cellContent objectForKey:kCellPlaceholderText]];
     [cell setCaptionText:[cellContent objectForKey:kCellTitleText]];
     [cell setInputType:[[cellContent objectForKey:kCellInputType] unsignedIntegerValue]];
-    [cell setCardFacingView:[[cellContent objectForKey:kCellCardFacingView] unsignedIntegerValue]];
+
+    if (cell.inputType == CollectionViewCellInputTypeCode) {
+        [cell setBelongsToFrontCard:NO];
+    }
+
     [cell setTag:[[cellContent objectForKey:kCellInputType] integerValue]];
 
     return cell;
@@ -127,35 +125,13 @@
 
     CollectionViewCell *cell = (CollectionViewCell *) [self.collectionView cellForItemAtIndexPath:cellIndexPath];
 
-    if (self.actualCell == nil) {
-        self.actualCell = cell;
-
-        if (self.actualCell.cardFacingView == CardFacingViewBack) {
-            [self.topContainer flipToFrontView:NO];
-        }
-
-        return;
-    }
-
-    if (self.actualCell.cardFacingView != cell.cardFacingView) {
-        if (cell.cardFacingView == CardFacingViewFront) {
-            [self.topContainer flipToFrontView:YES];
-        }
-        else {
-            [self.topContainer flipToFrontView:NO];
-        }
-    }
-
     self.actualCell = cell;
+    [self.topContainer flipToFrontView:self.actualCell.belongsToFrontCard];
 }
 
 - (void)didEndEditingCellWithTag:(NSUInteger)tag
 {
-    if (self.actualCell.cardFacingView == CardFacingViewBack) {
-        [self.topContainer flipToFrontView:YES];
-    }
-
-    self.actualCell = nil;
+    [self.topContainer flipToFrontView:!self.actualCell.belongsToFrontCard];
 }
 
 - (void)didReturnEditingCellWithTag:(NSUInteger)tag

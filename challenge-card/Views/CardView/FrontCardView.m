@@ -8,7 +8,7 @@
 
 #import "FrontCardView.h"
 
-@interface FrontCardView ()
+@interface FrontCardView () <UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *view;
 @property (strong, nonatomic) IBOutlet UIView *backgroundView;
@@ -150,6 +150,37 @@
 {
     [self.rightBottomLabel setHighlighted:YES];
     [self.rightBottomLabel setText:text];
+}
+
+#pragma mark Label Actions
+- (IBAction)centerLabelTouched:(UITapGestureRecognizer *)sender
+{
+    id <CardViewDelegate> strongDelegate = self.delegate;
+
+    if ([strongDelegate respondsToSelector:@selector(labelTouchedInside:)]) {
+        NSLog(@"centerLabelTouched");
+        [strongDelegate labelTouchedInside:sender.view];
+    }
+}
+
+- (IBAction)leftBottomLabelTouched:(UITapGestureRecognizer *)sender
+{
+    id <CardViewDelegate> strongDelegate = self.delegate;
+
+    if ([strongDelegate respondsToSelector:@selector(labelTouchedInside:)]) {
+        NSLog(@"leftBottomLabelTouched");
+        [strongDelegate labelTouchedInside:sender.view];
+    }
+}
+
+- (IBAction)rightBottomLabelTouched:(UITapGestureRecognizer *)sender
+{
+    id <CardViewDelegate> strongDelegate = self.delegate;
+
+    if ([strongDelegate respondsToSelector:@selector(labelTouchedInside:)]) {
+        NSLog(@"rightBottomLabelTouched");
+        [strongDelegate labelTouchedInside:sender.view];
+    }
 }
 
 @end

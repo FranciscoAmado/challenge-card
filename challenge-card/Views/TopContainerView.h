@@ -11,12 +11,13 @@
 #import "FrontCardView.h"
 #import "BackCardView.h"
 
-@interface TopContainerView : UIView
+@interface TopContainerView : UIView <CardViewDelegate>
 
 @property (strong, nonatomic) FrontCardView *frontView;
 @property (strong, nonatomic) BackCardView *backView;
 
 - (void)flipToFrontView:(BOOL)flipToFront;
 - (void)changeFrontCardBackgroundColor:(UIColor *)newColor;
+- (void)setSelectedWithTag:(NSUInteger)tag;
 
 @end
